@@ -9,4 +9,5 @@ Useful documents:
 
 This project is mainly focused on:
   - Windows > macOS > GNU/Linux (I like Linux Desktop but supporting Linux Desktop is extremly hard acrossing lots of distro)
-  - static > dynamic Qt (It seems like using static Qt is discouraged officially; however, there're lots of advantage of static Qt like file size, )
+  - static > dynamic Qt (It seems like using static Qt is discouraged officially; however, there're lots of advantage of static Qt like file size)
+  - release > debug version
