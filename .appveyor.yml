@@ -1,0 +1,19 @@
+image: Visual Studio 2017
+
+build_script:
+  - .\_build\configure_win_static.bat
+  - .\_build\make.bat
+  - .\_build\make_install.bat
+
+
+after_build:
+  - 7z a artifacts.7z C:\Qt\Qt-5.11.1\
+
+
+artifacts:
+  - path: artifacts.7z
+
+
+#on_finish:
+#  - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
