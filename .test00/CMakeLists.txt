@@ -4,10 +4,10 @@ project(test00)
 
 
 if(WIN32)
-    set(CMAKE_PREFIX_PATH "C:/tmp/Qt-5.11.1.release.shared")
-    link_directories("C:/tmp/Qt-5.11.1.release.shared/lib")
-    link_directories("C:/tmp/Qt-5.11.1.release.shared/plugins/platforms")
-	link_directories("C:/tmp/Qt-5.11.1.release.shared/plugins/styles")
+    set(CMAKE_PREFIX_PATH "C:/Qt/Qt-5.11.1.release.shared")
+    link_directories("C:/Qt/Qt-5.11.1.release.shared/lib")
+    link_directories("C:/Qt/Qt-5.11.1.release.shared/plugins/platforms")
+	link_directories("C:/Qt/Qt-5.11.1.release.shared/plugins/styles")
 else(WIN32)
     if(APPLE AND EXISTS /usr/local/opt/qt5)
         # ensure it can be found by CMake since it is not in the default /usr/local prefix.
