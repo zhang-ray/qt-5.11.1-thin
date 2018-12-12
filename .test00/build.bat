@@ -3,3 +3,4 @@ mkdir test00-build
 cd test00-build
 cmake -G "Visual Studio 14 2015" ..\.test00
 msbuild "/m" "/p:Configuration=Release" "/consoleloggerparameters:ErrorsOnly" test00.sln
+cd ..
