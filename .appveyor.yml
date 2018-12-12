@@ -5,6 +5,7 @@ build_script:
   - .\_build\make.bat
   - .\_build\make_install.bat
   - .\.test00\build.bat
+  - .\.test00\run.bat
 
 
 after_build:
