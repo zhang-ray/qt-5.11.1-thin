@@ -1,0 +1,9 @@
+os:
+  - osx
+language: cpp
+sudo: required
+
+script:
+  - ./configure -confirm-license -opensource -static -sdk macosx10.13 -release     -nomake examples -nomake tests           -no-feature-accessibility -no-feature-appstore-compliant -no-feature-big_codecs -no-feature-calendarwidget -no-feature-codecs -no-feature-commandlineparser -no-feature-completer -no-feature-gestures -no-feature-paint_debug
+  - make -j8
+  - make install
