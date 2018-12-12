@@ -3,11 +3,10 @@
 #include <QStandardPaths>
 #include <QMainWindow>
 #include "mainwindow.hpp"
-//#include <QtPlugin>
+#include <QtPlugin>
 
 
-//Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
-//Q_IMPORT_PLUGIN(QStylePlugin)
+Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
 
 
 

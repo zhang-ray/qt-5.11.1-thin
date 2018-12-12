@@ -47,8 +47,8 @@ endif(WIN32)
 
 if(WIN32)
     target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::WinMain
-	#  qtharfbuzz qtlibpng qtmain qtpcre2 translator ws2_32 Netapi32 Mincore Winmm version qwindows Dwmapi d3d9 Imm32 dxguid
-	#libEGL libGLESv2 preprocessor Qt5Concurrent Qt5Core Qt5DBus Qt5DeviceDiscoverySupport Qt5EdidSupport Qt5EglSupport Qt5EventDispatcherSupport Qt5FbSupport Qt5FontDatabaseSupport Qt5Gui Qt5Network Qt5OpenGL Qt5OpenGLExtensions Qt5PlatformCompositorSupport Qt5PrintSupport Qt5Sql Qt5Test Qt5ThemeSupport Qt5Widgets Qt5WinExtras Qt5Xml qtfreetype qtharfbuzz qtlibpng qtmain qtpcre2 translator qwindowsvistastyle
+	qtharfbuzz qtlibpng qtmain qtpcre2 translator ws2_32 Netapi32 Mincore Winmm version qwindows Dwmapi d3d9 Imm32 dxguid
+	libEGL libGLESv2 preprocessor Qt5Concurrent Qt5Core Qt5DBus Qt5DeviceDiscoverySupport Qt5EdidSupport Qt5EglSupport Qt5EventDispatcherSupport Qt5FbSupport Qt5FontDatabaseSupport Qt5Gui Qt5Network Qt5OpenGL Qt5OpenGLExtensions Qt5PlatformCompositorSupport Qt5PrintSupport Qt5Sql Qt5Test Qt5ThemeSupport Qt5Widgets Qt5WinExtras Qt5Xml qtfreetype qtharfbuzz qtlibpng qtmain qtpcre2 translator qwindowsvistastyle
 	)
 else(WIN32)
 	if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
