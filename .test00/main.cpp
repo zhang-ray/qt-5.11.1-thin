@@ -6,7 +6,12 @@
 #include <QtPlugin>
 
 
+#ifdef _WIN32
 Q_IMPORT_PLUGIN(QWindowsIntegrationPlugin)
+#elif defined __APPLE__
+Q_IMPORT_PLUGIN(QCocoaIntegrationPlugin)
+#endif
+
 
 
 
