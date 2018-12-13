@@ -11,7 +11,7 @@ if(WIN32)
 else(WIN32)
     if(APPLE AND EXISTS /usr/local/opt/qt5)
         # ensure it can be found by CMake since it is not in the default /usr/local prefix.
-        list(APPEND CMAKE_PREFIX_PATH "/usr/local/opt/qt5")
+        list(APPEND CMAKE_PREFIX_PATH "/usr/local/Qt-5.11.1")
     endif()
 endif(WIN32)
 
@@ -52,15 +52,6 @@ if(WIN32)
 	)
 else(WIN32)
 	if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
-	    target_link_libraries(${PROJECT_NAME}
-			Qt5::Widgets
-			client_essential
-			boost_system boost_system-mt 
-			boost_log_setup boost_log_setup-mt 
-			boost_log boost_log-mt 
-			boost_filesystem boost_filesystem-mt 
-			boost_thread-mt
-			pthread
-		)
+	    target_link_libraries(${PROJECT_NAME} Qt5::Widgets )
     endif()
 endif(WIN32)
