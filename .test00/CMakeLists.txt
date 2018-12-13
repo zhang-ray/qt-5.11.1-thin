@@ -53,7 +53,7 @@ if(WIN32)
 	)
 else(WIN32)
 	if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
-	    target_link_libraries(${PROJECT_NAME} Qt5::Widgets Qt5::WinMain
+	    target_link_libraries(${PROJECT_NAME} Qt5::Widgets 
 	qtharfbuzz qtlibpng qtmain qtpcre2 translator qwindows	libEGL libGLESv2 preprocessor Qt5Concurrent Qt5Core Qt5DBus Qt5DeviceDiscoverySupport Qt5EdidSupport Qt5EglSupport Qt5EventDispatcherSupport Qt5FbSupport Qt5FontDatabaseSupport Qt5Gui Qt5Network Qt5OpenGL Qt5OpenGLExtensions Qt5PlatformCompositorSupport Qt5PrintSupport Qt5Sql Qt5Test Qt5ThemeSupport Qt5Widgets Qt5WinExtras Qt5Xml qtfreetype qtharfbuzz qtlibpng qtmain qtpcre2 translator 
 )
     endif()
