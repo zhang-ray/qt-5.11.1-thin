@@ -60,7 +60,7 @@ else(WIN32)
 	if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
 	    target_link_libraries(${PROJECT_NAME} Qt5::Widgets 
 	qtharfbuzz qtlibpng qtpcre2 Qt5Concurrent Qt5Core Qt5DBus Qt5DeviceDiscoverySupport Qt5EdidSupport Qt5EventDispatcherSupport Qt5FbSupport Qt5FontDatabaseSupport Qt5Gui Qt5Network Qt5OpenGL Qt5OpenGLExtensions Qt5PlatformCompositorSupport Qt5PrintSupport Qt5Sql Qt5Test Qt5ThemeSupport Qt5Widgets Qt5MacExtras Qt5Xml qtfreetype 
- "-framework DiskArbitration -framework IOKit -lm -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation"
+ "-framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation"
 z qcocoa cocoaprintersupport
 )
     endif()
