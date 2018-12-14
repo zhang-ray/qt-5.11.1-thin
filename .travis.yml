@@ -4,7 +4,7 @@ language: cpp
 sudo: required
 
 script:
-- ./configure -confirm-license -opensource -static -sdk macosx10.13 -release     -nomake examples -nomake tests           -no-feature-appstore-compliant -no-feature-big_codecs -no-feature-calendarwidget -no-feature-codecs -no-feature-commandlineparser -no-feature-completer -no-feature-gestures -no-feature-paint_debug
+- ./configure -confirm-license -opensource -static -sdk macosx10.13 -release -opengl desktop    -nomake examples -nomake tests           -no-feature-appstore-compliant -no-feature-big_codecs -no-feature-calendarwidget -no-feature-codecs -no-feature-commandlineparser -no-feature-completer -no-feature-gestures -no-feature-paint_debug
 - make -j8
 - sudo make install
 - mkdir test00-build && cd test00-build && cmake -DCMAKE_PREFIX_PATH="/usr/local/Qt-5.11.1/" ../.test00 && make -j3
