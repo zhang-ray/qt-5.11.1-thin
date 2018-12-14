@@ -13,7 +13,10 @@ else(WIN32)
         # ensure it can be found by CMake since it is not in the default /usr/local prefix.
         list(APPEND CMAKE_PREFIX_PATH "/usr/local/Qt-5.11.1")
         set(Qt5Widgets_DIR "/usr/local/Qt-5.11.1/lib/cmake/Qt5Widgets/")
-        link_directories("/usr/local/Qt-5.11.1/lib")
+        link_directories(
+            "/usr/local/Qt-5.11.1/lib"
+            "/usr/local/Qt-5.11.1/lib/plugins/platforms"
+        )
     endif()
 endif(WIN32)
 
