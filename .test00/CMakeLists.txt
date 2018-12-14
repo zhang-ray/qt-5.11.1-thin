@@ -16,6 +16,7 @@ else(WIN32)
         link_directories(
             "/usr/local/Qt-5.11.1/lib"
             "/usr/local/Qt-5.11.1/plugins/platforms/"
+            "/usr/local/Qt-5.11.1/plugins/printsupport/"
         )
     endif()
 endif(WIN32)
@@ -60,7 +61,7 @@ else(WIN32)
 	    target_link_libraries(${PROJECT_NAME} Qt5::Widgets 
 	qtharfbuzz qtlibpng qtpcre2 Qt5Concurrent Qt5Core Qt5DBus Qt5DeviceDiscoverySupport Qt5EdidSupport Qt5EventDispatcherSupport Qt5FbSupport Qt5FontDatabaseSupport Qt5Gui Qt5Network Qt5OpenGL Qt5OpenGLExtensions Qt5PlatformCompositorSupport Qt5PrintSupport Qt5Sql Qt5Test Qt5ThemeSupport Qt5Widgets Qt5MacExtras Qt5Xml qtfreetype 
  "-framework DiskArbitration -framework IOKit -lm -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation"
-z qcocoa
+z qcocoa cocoaprintersupport
 )
     endif()
 endif(WIN32)
