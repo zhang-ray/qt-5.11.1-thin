@@ -15,7 +15,7 @@ else(WIN32)
         set(Qt5Widgets_DIR "/usr/local/Qt-5.11.1/lib/cmake/Qt5Widgets/")
         link_directories(
             "/usr/local/Qt-5.11.1/lib"
-            "/usr/local/Qt-5.11.1/lib/plugins/platforms"
+            "/usr/local/Qt-5.11.1/plugins/platforms/"
         )
     endif()
 endif(WIN32)
