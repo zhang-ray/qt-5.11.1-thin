@@ -9,9 +9,15 @@ if(WIN32)
     link_directories("C:/Qt/Qt-5.11.1/plugins/platforms")
     link_directories("C:/Qt/Qt-5.11.1/plugins/styles")
 else(WIN32)
-    if(APPLE AND EXISTS /usr/local/opt/qt5)
+    if(APPLE AND EXISTS /usr/local/Qt-5.11.1)
         # ensure it can be found by CMake since it is not in the default /usr/local prefix.
-        list(APPEND CMAKE_PREFIX_PATH "/usr/local/opt/qt5")
+        list(APPEND CMAKE_PREFIX_PATH "/usr/local/Qt-5.11.1")
+        set(Qt5Widgets_DIR "/usr/local/Qt-5.11.1/lib/cmake/Qt5Widgets/")
+        link_directories(
+            "/usr/local/Qt-5.11.1/lib"
+            "/usr/local/Qt-5.11.1/plugins/platforms/"
+            "/usr/local/Qt-5.11.1/plugins/printsupport/"
+        )
     endif()
 endif(WIN32)
 
@@ -52,15 +58,10 @@ if(WIN32)
 	)
 else(WIN32)
 	if(${CMAKE_SYSTEM_NAME} STREQUAL "Darwin")
-	    target_link_libraries(${PROJECT_NAME}
-			Qt5::Widgets
-			client_essential
-			boost_system boost_system-mt 
-			boost_log_setup boost_log_setup-mt 
-			boost_log boost_log-mt 
-			boost_filesystem boost_filesystem-mt 
-			boost_thread-mt
-			pthread
-		)
+	    target_link_libraries(${PROJECT_NAME} Qt5::Widgets
+ "-framework DiskArbitration -framework IOKit -framework Foundation -framework CoreServices -framework AppKit -framework Security -framework ApplicationServices -framework CoreFoundation -framework OpenGL -framework Carbon -framework QuartzCore -framework ImageIO"
+z qcocoa cups
+Qt5AccessibilitySupport Qt5ClipboardSupport Qt5Concurrent Qt5Core Qt5DBus Qt5DeviceDiscoverySupport Qt5EdidSupport Qt5EventDispatcherSupport Qt5FbSupport Qt5FontDatabaseSupport Qt5GraphicsSupport Qt5Gui Qt5MacExtras Qt5Network Qt5OpenGL Qt5OpenGLExtensions Qt5PlatformCompositorSupport Qt5PrintSupport Qt5Sql Qt5Test Qt5ThemeSupport Qt5Widgets Qt5Xml qtfreetype qtharfbuzz qtlibpng qtpcre2 
+)
     endif()
 endif(WIN32)
