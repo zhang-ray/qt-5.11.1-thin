@@ -1,9 +1,9 @@
 image: Visual Studio 2017
 
 build_script:
-  - .\_build\configure_win_static.bat
-  - .\_build\make.bat
-  - .\_build\make_install.bat
+  - .\.build\configure_win_static.bat
+  - .\.build\make.bat
+  - .\.build\make_install.bat
   - .\.test00\build.bat
   - .\.test00\run.bat
 
