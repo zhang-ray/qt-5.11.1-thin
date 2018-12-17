@@ -9,13 +9,25 @@ build_script:
 
 
 after_build:
-  - 7z a artifacts.7z C:\Qt\Qt-5.11.1\
+  - 7z a Qt-5.11.1-win32.7z  C:\Qt\Qt-5.11.1\
 
 
 artifacts:
-  - path: artifacts.7z
+  - path: Qt-5.11.1-win32.7z
 
 
 on_failure:
   - ps: $blockRdp = $true; iex ((new-object net.webclient).DownloadString('https://raw.githubusercontent.com/appveyor/ci/master/scripts/enable-rdp.ps1'))
+
+
+deploy:
+  provider: GitHub
+  auth_token:
+    secure: PiQDTyaNV3HdYRawTlwyD/bsMbpBg2Kx+/BEUEz9qOasvZlDBmxj3tFB0bNYwXIc
+  artifact: Qt-5.11.1-win32.7z
+  draft: false
+  prerelease: false
+  on:
+    branch: master                 # release from master branch only
+    appveyor_repo_tag: true        # deploy on tag push only
 
